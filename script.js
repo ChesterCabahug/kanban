@@ -104,7 +104,17 @@ function updateDOM() {
 // When item starts dragging
 function drag(e) {
     draggedItem = e.target;
-    console.log(draggedItem)
+    console.log("draggedItem", draggedItem);
+}
+
+// Column Allows for Item to Drop
+function allowDrop(e) {
+    e.preventDefault();
+}
+
+// dragging an item in column
+function drop(e) {
+    e.preventDefault();
 }
 
 // on load
