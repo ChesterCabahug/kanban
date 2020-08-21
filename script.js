@@ -58,18 +58,12 @@ function updateSavedColumns() {
 
 // filter arrays  to remove empty items
 function filterArray(array) {
-    // console.log(array)
     const filteredArray = array.filter(item => item !== null)
-    // console.log(filteredArray)
     return filteredArray
 }
 
 // Create DOM Elements for each list item
 function createItemEl(columnEl, column, item, index) {
-    // console.log("item:", item);
-    // console.log("column:", column); //concerned about this for out delete function
-    // console.log("index:", index); //concerned about this for out delete function
-    // console.log("============================");
     // List Item
     const listEl = document.createElement("li");
     listEl.classList.add("drag-item");
@@ -121,13 +115,10 @@ function updateDOM() {
 // update item, delete if necessary, or update the array value
 function updateItem(id, column) {
     const selectedArray = listArrays[column];
-    // console.log(selectedArray);
     const selectedColumnEl = listColumns[column].children;
-    // console.log(selectedColumnEl[id].textContent)
     if (!selectedColumnEl[id].textContent) {
         delete selectedArray[id];
     }
-    // console.log(selectedArray);
     updateDOM();
 }
 
