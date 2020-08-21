@@ -3,7 +3,7 @@ const saveItemBtns = document.querySelectorAll(".solid");
 const addItemContainers = document.querySelectorAll(".add-container");
 const addItems = document.querySelectorAll(".add-item");
 // Item Lists
-const itemLists = document.querySelectorAll(".drag-item-list");
+const listColumns = document.querySelectorAll(".drag-item-list");
 const backlogList = document.getElementById("backlog-list");
 const progressList = document.getElementById("progress-list");
 const completeList = document.getElementById("complete-list");
@@ -111,6 +111,13 @@ function drag(e) {
 function allowDrop(e) {
     e.preventDefault();
 }
+
+
+// When Item Enters a Column Area
+function dragEnter(column) {
+    listColumns[column].classList.add("over")
+}
+
 
 // dragging an item in column
 function drop(e) {
