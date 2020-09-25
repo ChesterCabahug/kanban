@@ -153,9 +153,15 @@ function hideInputBox(column) {
 
 //  allow arrays to reflect drag and drop items
 function rebuildArrays() {
-    backlogListArray = Array.from(backlogList.children).map((i) => i.textContent);
-    progressListArray = Array.from(progressList.children).map((i) => i.textContent);
-    completeListArray = Array.from(completeList.children).map((i) => i.textContent);
+    backlogListArray = Array.from(backlogList.children).map(
+        (i) => i.textContent
+    );
+    progressListArray = Array.from(progressList.children).map(
+        (i) => i.textContent
+    );
+    completeListArray = Array.from(completeList.children).map(
+        (i) => i.textContent
+    );
     onHoldListArray = Array.from(onHoldList.children).map((i) => i.textContent);
     updateDOM();
 }
